@@ -13,7 +13,8 @@ edition = "2021"
 [dependencies]
 serde_json = { version = "1.0", optional = true }
 serde-cs = { version = "0.2.4", optional = true }
-actix-web = { version = "4.8.0", default-features = false, optional = true }
+serde_yml = { version = "0.0.10", optional = true }
+actix-web = { version = "4.3.0", default-features = false, optional = true }
 futures = { version = "0.3.30", optional = true }
 deserr-internal = { version = "=0.6.2", path = "derive" }
 strsim = "0.11.1"
@@ -24,6 +25,7 @@ serde_urlencoded = "0.7.1"
 [features]
 default = ["serde-json", "serde-cs"]
 serde-json = ["serde_json"]
+serde-yml = ["serde_yml"]
 serde-cs = ["dep:serde-cs"]
 actix-web = ["dep:actix-web", "futures", "actix-http", "actix-utils"]
 
@@ -40,4 +42,3 @@ members = ["derive", "examples/*"]
 
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]
-

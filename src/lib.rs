@@ -8,6 +8,8 @@ pub mod actix_web;
 pub mod serde_cs;
 #[cfg(feature = "serde-json")]
 pub mod serde_json;
+#[cfg(feature = "serde-yml")]
+pub mod serde_yml;
 
 mod impls;
 mod value;
