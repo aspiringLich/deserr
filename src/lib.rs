@@ -1,13 +1,15 @@
 #![doc = include_str!("../README.md")]
 
+pub mod errors;
+
 #[cfg(feature = "actix-web")]
 pub mod actix_web;
-pub mod errors;
-mod impls;
 #[cfg(feature = "serde-cs")]
 pub mod serde_cs;
 #[cfg(feature = "serde-json")]
 pub mod serde_json;
+
+mod impls;
 mod value;
 
 extern crate self as deserr;
